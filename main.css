@@ -10,7 +10,35 @@ body {
     flex-direction: column;
 }
 
+.navbar{
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+}
+.navbar ul {
+    list-style-type: none; /* Ro'yxat belgilari o'chiriladi */
+    padding: 0; /* Bo'sh joyni olib tashlash */
+    margin: 0; /* Marginni olib tashlash */
+}
+
+.navbar ul li {
+    display: inline; /* Elementlarni yonma-yon joylashtirish */
+    margin: 0 5px; /* O'ng va chapdan bo'sh joy */
+}
+
+.navbar ul li a {
+    color: white; /* Matn rangini oq qiling */
+    text-decoration: none; /* Chiziqni o'chirish */
+}
+
+.navbar ul li a:hover {
+    text-decoration: underline; /* Hover (ustiga kelsa) holatida chiziq qo'shish */
+}
+
 header {
+    margin-top: 14%;
     background-image: url(https://avatars.mds.yandex.net/i?id=2bac0a5b56766e4b705f78164f74de01_l-2816445-images-thumbs&n=13); /* Header uchun rasm URL'sini o'zgartiring */
     background-size: cover; /* Rasmni to'liq qoplash */
     background-position: center; /* Rasmni markazda joylashtirish */
@@ -32,8 +60,14 @@ section {
     background: #fff;
     padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(75, 84, 139, 0.897); /* Shadow qo'shish */
+    transition: box-shadow 0.3s ease; /* Harakatda silliq o'tish */
 }
+
+section:hover {
+    box-shadow: 0 8px 30px rgba(65, 40, 40, 0.959); /* Hoverda kuchaytirilgan shadow */
+}
+
 
 footer {
     text-align: center;
@@ -53,4 +87,39 @@ footer {
 
 .map-button:hover {
     background-color: #45a049;
+}
+.modal {
+    display: none; /* Modalni yashirin qilish */
+    position: fixed; /* Qotib qoladi */
+    z-index: 1000; /* Boshqa elementlardan ustun bo'lishi uchun */
+    left: 0;
+    top: 0;
+    width: 100%; /* To'liq kenglik */
+    height: 100%; /* To'liq balandlik */
+    overflow: auto; /* Sahnada o'sha joyda harakatlanish */
+    background-color: rgba(0, 0, 0, 0.4); /* Shaffof qora */
+}
+
+.modal:target {
+    display: block; /* Modalni ko'rsatish */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* Yuqoridan 15% va markazda joylashishi */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Kengligi 80% */
+}
+
+.close {
+    color: #aaa; /* X chizigi rang */
+    float: right; /* O'ng tomonga joylashishi */
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none; /* Chiziqni o'chirish */
+}
+
+.close:hover {
+    color: black; /* Hoverda rangni qora */
 }
