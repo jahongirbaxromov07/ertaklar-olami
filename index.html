@@ -7,7 +7,16 @@
     <link rel="stylesheet" href="/main.css">
 </head>
 <body>
-    <header>
+    <div  class="navbar">
+        <ul>
+            <li><a href="#about">Asosiy</a></li>
+            <li><a href="#video">Video</a></li>
+            <li><a href="#courses">Darslarimiz</a></li>
+            <li><a href="#contact">Aloqa</a></li>
+            <li><a style="color: red;" href="https://maps.app.goo.gl/h7s5acnpECwaq4v79" target="_blank">MANZIL</a></li>
+        </ul>
+    </div>
+    <header id="about">
         <h1>Ertaklar olami</h1>
     </header>
     <main>
@@ -15,7 +24,7 @@
             <h2>Haqida</h2>
             <p>Ertaklar olami bolalar uchun zamonaviy ta'lim muassasasi. Bizning maqsadimiz, bolalarning ijodkorligini, o‘z-o‘zini ifodalashini va ijtimoiy ko‘nikmalarini rivojlantirishdir.</p>
         </section>
-        <section>
+        <section id="courses">
             <h2>Darslarimiz</h2>
             <ul>
                 <li>Rus va ingliz tillari</li>
@@ -25,11 +34,27 @@
                 <li>Sport va jismoniy tarbiya</li>
             </ul>
         </section>
-                <section>
-            <h2>Ertaklar Video</h2>
-            <iframe width="260" height="315" src="https://www.youtube.com/embed/VbqWNo4o6KE?si=SeLKnDy9l3X9oJ15" frameborder="0" allowfullscreen></iframe>
-        </section>      
-        <section>
+        <section id="events">
+            <h2>Tadbirlar</h2>
+            <ul>
+                <li>1-iyun: Bolalar kuni - maxsus tadbir</li>
+                <li>26-dekabr: "Yangi yil" festivali</li>
+                <li>8-mart: "Onajonlar" bayrami</li>
+            </ul>
+        </section>
+        <section id="video">
+            <h2>Bolalar uchun Video</h2>
+            <iframe id="video" width="320" height="315" src="https://www.youtube.com/embed/dafj7f3MPkw?si=HTDEBQBHmKzdgs3U" frameborder="0" allowfullscreen></iframe><br><br><br>
+            <a href="#videoModal" class="openModal">Boshqa Videolari Ko'rish</a>
+            
+            <div id="videoModal" class="modal">
+                <div class="modal-content">
+                    <a href="#" class="close">&times;</a>
+                    <iframe width="320" height="315" src="https://www.youtube.com/embed/VbqWNo4o6KE" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section> 
+        <section id="contact">
             <h2>Aloqa</h2>
             <p>Telefon: <a href="tel: +998932740206">+998932740206</a></p>
             <p>
